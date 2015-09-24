@@ -3,6 +3,8 @@
 
 <% if current_user && current_user.admin == true %>
 
+<%= paginate @users %>
+
   <table>
     <tr>
       <th>Email</th>
