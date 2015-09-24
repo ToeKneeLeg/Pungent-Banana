@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150922211716) do
+ActiveRecord::Schema.define(version: 20150923205055) do
+
+  create_table "admin_users", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "movies", force: true do |t|
     t.string   "title"
@@ -44,6 +49,7 @@ ActiveRecord::Schema.define(version: 20150922211716) do
     t.datetime "updated_at"
     t.string   "firstname"
     t.string   "lastname"
+    t.boolean  "admin"
   end
 
 end

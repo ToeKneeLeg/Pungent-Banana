@@ -40,3 +40,4 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'rmagick'
 gem 'carrierwave'
+gem 'web-console', '~> 2.0'

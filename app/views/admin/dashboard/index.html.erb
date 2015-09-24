@@ -1,0 +1,9 @@
+<h1>Administration</h1>
+
+<% if current_user && current_user.admin == true %>
+  <ul>
+    <li><%= link_to 'Manage Users', admin_users_path %></li>
+  </ul>
+<% else %>
+  <p>Please <%= link_to "log in", new_admin_session_path %> to see access the administrative tools.</p> 
+<% end %>

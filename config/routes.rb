@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+
+  namespace :admin do
+    get '', to: 'dashboard#index', as: '/'
+    resources :sessions, only: [:new, :create, :destroy]
+    resources :users
+  end
+
   resources :movies do
     resources :reviews, only: [:new, :create]
   end
