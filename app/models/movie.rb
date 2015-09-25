@@ -4,7 +4,7 @@ class Movie < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
-  validates :title, :director, :description, :poster_image_url, :release_date, presence: true
+  validates :title, :director, :description, :release_date, presence: true
 
   validates :runtime_in_minutes, numericality: {only_integer: true}
 

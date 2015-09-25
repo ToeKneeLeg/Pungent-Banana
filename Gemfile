@@ -37,7 +37,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+gem 'pry'
 gem 'rmagick'
 gem 'carrierwave'
 # gem 'web-console', '~> 2.0'
