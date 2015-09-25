@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get '', to: 'dashboard#index', as: '/'
-    resources :sessions, only: [:new, :create, :destroy]
+    resource :session, only: [:new, :create, :destroy]
     resources :users
   end
 
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
 
-  resources :sessions, only: [:new, :create, :destroy]
+  resource :session, only: [:new, :create, :destroy]
 
   root to: 'movies#index'
   # The priority is based upon order of creation: first created -> highest priority.
