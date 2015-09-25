@@ -5,7 +5,7 @@ class MoviesController < ApplicationController
 
     @movies = Movie.search_by_title(params[:q]) unless params[:q].blank?
     
-    @movies = Movie.search_by_director(params[:r]) unless params[:r].blank?
+    # @movies = Movie.search_by_director(params[:r]) unless params[:r].blank?
 
     if params[:duration].to_i == 1
       @movies = Movie.search_shorter_than_90

@@ -3,10 +3,8 @@
 <hr>
 
 <%= form_tag("/movies", method: "get") do %>
-  <%= label_tag(:q, "Search by Title:") %>
+  <%= label_tag(:q, "Search by Title or Director:") %>
   <%= text_field_tag(:q) %>
-  <%= label_tag(:r, "Search by Director:") %>
-  <%= text_field_tag(:r) %>
   <%= label_tag(:duration, "Search by Duration:") %>
   <%= select_tag(:duration, options_for_select([["Select a duration", 0], ["Under 90 minutes", 1], ["Between 90 and 120 minutes", 2], ["Over 120 minutes", 3]], 0)) %>
   <%= submit_tag("Search") %>
